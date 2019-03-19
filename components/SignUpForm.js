@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { FormLabel, Input, Button } from 'react-native-elements';
+import { View } from 'react-native';
+import { Input, Button } from 'react-native-elements';
 
 class SignUpForm extends Component {
+    // constructor(props) {
+    //     super(props)
+
+    //     this.state = {
+    //         phone: ''
+    //     };
+    // }
+
+    state = { phone: '' };
+
     render() {
         return (
             <View>
