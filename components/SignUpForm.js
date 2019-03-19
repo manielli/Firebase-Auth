@@ -20,16 +20,20 @@ class SignUpForm extends Component {
 
     // ES7 or ES 2017 for using it without .bind(this)
     // as opposed to handleSubmit() { }
-    handleSubmit = () => {
-        axios.post(`${ROOT_URL}/createUser`, {
-            phone: this.state.phone
-        })
-        .then(() => {
-            axios.post(`${ROOT_URL}/requestOneTimePassword`, {
-                phone: this.state.phone
-            });
-        });
-            
+    // handleSubmit = () => {
+    //     axios.post(`${ROOT_URL}/createUser`, {
+    //         phone: this.state.phone
+    //     })
+    //     .then(() => {
+    //         axios.post(`${ROOT_URL}/requestOneTimePassword`, {
+    //             phone: this.state.phone
+    //         });
+    //     });
+    // }
+    // ES7 Async Await Syntactic shorthand
+    handleSubmit = async () => {
+        await axios.post(`${ROOT_URL}/createUser`, { phone: this.state.phone });
+        await axios.post(`${ROOT_URL}/requestOneTimePassword`, { phone: this.state.phone });
     }
 
     render() {
