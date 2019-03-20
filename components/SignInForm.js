@@ -15,7 +15,8 @@ export default class SignInForm extends React.Component {
         const { phone, code } = this.state;
 
         try {
-            await axios.post(`${ROOT_URL}/verifyOneTimePassword`, { phone, code });
+            let response = await axios.post(`${ROOT_URL}/verifyOneTimePassword`, { phone, code });
+            console.log(response);
         } catch (err) {
             // this.setState({ error: 'Something went wrong again little bit later' });
             console.log(err);

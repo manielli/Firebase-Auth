@@ -35,7 +35,7 @@ class SignUpForm extends Component {
     handleSignUp = async () => {
         // try { } catch (err) {} is not something new, it is very old
         try {
-            await axios.post(`${ROOT_URL}/createUser`, { phone: this.state.phone });
+            // await axios.post(`${ROOT_URL}/createUser`, { phone: this.state.phone });
             await axios.post(`${ROOT_URL}/requestOneTimePassword`, { phone: this.state.phone });
         } catch (err) {
             // This is what we usually use in production
