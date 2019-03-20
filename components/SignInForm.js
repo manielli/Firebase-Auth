@@ -22,7 +22,6 @@ export default class SignInForm extends React.Component {
             // this.setState({ error: 'Something went wrong again little bit later' });
             console.log(err);
         }
-
     }
 
     render() {
